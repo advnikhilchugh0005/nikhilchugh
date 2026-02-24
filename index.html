@@ -337,6 +337,21 @@ footer {
     color: #c9a227;
     transform: translateY(-5px);
 }
+    .floating-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: #25D366;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    z-index: 9999;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
 </style>
 
 <script type="application/ld+json">
@@ -490,17 +505,17 @@ As a criminal lawyer in Panipat and a constitutional law practitioner, he is com
 <div class="insta-stats">
 
 <div>
-<h3 style="color:#c9a227; font-size:28px;">10K+</h3>
+<h3 class="counter" data-target="10000" style="color:#c9a227; font-size:28px;">0</h3>
 <p>Followers</p>
 </div>
 
 <div>
-<h3 style="color:#c9a227; font-size:28px;">5M+</h3>
+<h3 class="counter" data-target="5000000" style="color:#c9a227; font-size:28px;">0</h3>
 <p>Total Reel Views</p>
 </div>
 
 <div>
-<h3 style="color:#c9a227; font-size:28px;">200+</h3>
+<h3 class="counter" data-target="200" style="color:#c9a227; font-size:28px;">0</h3>
 <p>Legal Reels Published</p>
 </div>
 
@@ -616,5 +631,59 @@ document.querySelector(".back-to-top").addEventListener("click", function(e) {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 </script>  
+    <script src="https://unpkg.com/scrollreveal"></script>
+<script>
+ScrollReveal().reveal('.card', {
+    distance: '40px',
+    duration: 800,
+    easing: 'ease-in-out',
+    origin: 'bottom',
+    interval: 150
+});
+</script>
+    <a href="https://wa.me/919138400890" class="floating-whatsapp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+<script>
+const counters = document.querySelectorAll('.counter');
+const speed = 200;
+
+const startCounting = () => {
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const increment = target / speed;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 20);
+      } else {
+        if (target >= 1000000) {
+          counter.innerText = (target / 1000000) + "M+";
+        } else if (target >= 1000) {
+          counter.innerText = (target / 1000) + "K+";
+        } else {
+          counter.innerText = target + "+";
+        }
+      }
+    };
+    updateCount();
+  });
+};
+
+let counted = false;
+
+window.addEventListener("scroll", function() {
+  const section = document.querySelector(".insta-stats");
+  const sectionPosition = section.getBoundingClientRect().top;
+  const screenPosition = window.innerHeight;
+
+  if (sectionPosition < screenPosition && !counted) {
+    startCounting();
+    counted = true;
+  }
+});
+</script>
 </body>
 </html>
