@@ -403,20 +403,22 @@ footer {
     border-right: 1px solid #111;
 }
 }
-/* ============================= */
+/* =============================== */
 /* FIXED TOP LEFT LOGO */
-/* ============================= */
+/* =============================== */
 
 .fixed-logo {
-    position: fixed;
-    top: 15px;
-    left: 20px;
-    z-index: 3000;
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  z-index: 50;          /* reduced from 3000 */
+  pointer-events: auto;
 }
 
 .fixed-logo img {
-    width: 90px;
-    height: auto;
+  width: 80px;          /* slightly smaller */
+  height: auto;
+  display: block;
 }
 
 /* Mobile adjustment */
