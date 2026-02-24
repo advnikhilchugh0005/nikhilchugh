@@ -309,6 +309,34 @@ footer {
         padding: 18px;
     }
 }  
+/* ============================= */
+/* BACK TO TOP BUTTON */
+/* ============================= */
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: #c9a227;
+    color: #ffffff;
+    text-align: center;
+    line-height: 45px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.back-to-top:hover {
+    background-color: #000;
+    color: #c9a227;
+    transform: translateY(-5px);
+}
 </style>
 
 <script type="application/ld+json">
@@ -547,6 +575,10 @@ View Google Profile
 <footer>
 © 2026 Nikhil Chugh | Advocate | All Rights Reserved
 </footer>
+    <!-- BACK TO TOP BUTTON -->
+<a href="#" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+</a>
     <!-- SIDE MENU -->
 <div id="sideMenu" class="side-menu">
     <span class="close-btn" onclick="closeMenu()">×</span>
@@ -567,5 +599,20 @@ function closeMenu() {
     document.getElementById("sideMenu").style.right = "-280px";
 }
 </script>
+  <script>
+window.onscroll = function() {
+    var button = document.querySelector(".back-to-top");
+    if (document.documentElement.scrollTop > 300) {
+        button.style.display = "block";
+    } else {
+        button.style.display = "none";
+    }
+};
+
+document.querySelector(".back-to-top").addEventListener("click", function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+</script>  
 </body>
 </html>
