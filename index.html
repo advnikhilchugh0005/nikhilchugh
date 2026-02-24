@@ -225,7 +225,7 @@ footer {
     background: #000;
     padding-top: 80px;
     transition: 0.4s ease;
-    z-index: 1000;
+    z-index: 2000;   /* changed from 1000 */
 }
 
 .side-menu a {
@@ -593,10 +593,12 @@ View Google Profile
 <script>
 function openMenu() {
     document.getElementById("sideMenu").style.right = "0";
+    document.querySelector(".menu-toggle").style.display = "none";
 }
 
 function closeMenu() {
     document.getElementById("sideMenu").style.right = "-280px";
+    document.querySelector(".menu-toggle").style.display = "block";
 }
 </script>
   <script>
