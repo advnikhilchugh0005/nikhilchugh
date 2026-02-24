@@ -402,31 +402,6 @@ footer {
     font-weight: 600;
     border-right: 1px solid #111;
 }
-}
-/* =============================== */
-/* FIXED TOP LEFT LOGO */
-/* =============================== */
-
-.fixed-logo {
-  position: fixed;
-  top: 15px;
-  left: 20px;
-  z-index: 50;          /* reduced from 3000 */
-  pointer-events: auto;
-}
-
-.fixed-logo img {
-  width: 80px;          /* slightly smaller */
-  height: auto;
-  display: block;
-}
-
-/* Mobile adjustment */
-@media (max-width:768px) {
-    .fixed-logo img {
-        width: 65px;
-    }
-}
 </style>
 
 <script type="application/ld+json">
@@ -476,19 +451,6 @@ footer {
 
 </head>
 <body>
-/* ===== ALWAYS FIXED TOP LEFT LOGO ===== */
-.fixed-logo {
-  position: fixed !important;
-  top: 12px;
-  left: 12px;
-  z-index: 9999;
-}
-
-.fixed-logo img {
-  width: 65px;   /* mobile friendly */
-  height: auto;
-  display: block;
-}
 <header>
 
 <div class="menu-toggle" onclick="openMenu()">
