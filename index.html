@@ -25,6 +25,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+    body {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 body {
     margin:0;
     font-family:'Poppins',sans-serif;
@@ -148,8 +156,8 @@ footer {
 
 /* Card hover effect */
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(201,162,39,0.25);
 }
 
 /* Button hover refinement */
@@ -157,6 +165,9 @@ footer {
     background:#000;
     color:#c9a227;
     transform: translateY(-3px);
+}
+.btn:active {
+    transform: scale(0.95);
 }
 /* HERO LINE BREAK CONTROL */
 .mobile-break br {
@@ -352,6 +363,46 @@ footer {
     z-index: 9999;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
+.testimonial {
+    display: none;
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.testimonial.active {
+    display: block;
+}
+
+.testimonial h4 {
+    margin-top: 20px;
+    color: #c9a227;
+}
+.mobile-contact-bar {
+    display: none;
+}
+
+@media (max-width:768px) {
+.mobile-contact-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #000;
+    z-index: 9999;
+}
+
+.mobile-contact-bar a {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    color: #c9a227;
+    text-decoration: none;
+    font-weight: 600;
+    border-right: 1px solid #111;
+}
+}
 </style>
 
 <script type="application/ld+json">
@@ -419,7 +470,7 @@ footer {
     <span class="mobile-break"><br>District Court Panipat</span>
 </h1>
 <p>Litigation & Advisory Practice | Panipat</p>
-
+<p style="color:#00ff7f; font-weight:600;">● Available for Consultation</p>
 <p style="margin-top:8px; font-weight:500;">
   <a href="tel:+919138400890" style="color:#fff; text-decoration:none;">+91 91384 00890</a>
 </p>
@@ -551,6 +602,28 @@ View Google Profile
 
 </div>
 </section>
+<section style="background:#000; color:#fff; text-align:center; padding:80px 20px;">
+<h2 style="color:#c9a227;">Client Testimonials</h2>
+
+<div class="testimonial-slider">
+
+<div class="testimonial active">
+<p>"Highly professional and strategic in approach. Got my bail granted smoothly."</p>
+<h4>- Client, Panipat</h4>
+</div>
+
+<div class="testimonial">
+<p>"Very knowledgeable in NI Act matters. Clear legal guidance and strong drafting."</p>
+<h4>- Business Client</h4>
+</div>
+
+<div class="testimonial">
+<p>"Responsive, ethical and confident courtroom representation."</p>
+<h4>- Litigation Client</h4>
+</div>
+
+</div>
+</section>
 <section>
 <h2>Professional Membership</h2>
 <div class="card">
@@ -575,6 +648,16 @@ View Google Profile
 <p>Email: advnikhilchugh@gmail.com</p>
 <p>Phone: 9138400890</p>
 <p>Instagram | LinkedIn | YouTube: @advnikhilchugh</p>
+</div>
+</section>
+    <section>
+<h2>Recent Legal Highlights</h2>
+<div class="card">
+<ul>
+<li>Bail Granted in Criminal Matter</li>
+<li>Section 138 NI Act Defence Success</li>
+<li>Drafted Constitutional Writ Petition</li>
+</ul>
 </div>
 </section>
 <section>
@@ -685,5 +768,19 @@ window.addEventListener("scroll", function() {
   }
 });
 </script>
+    <script>
+let index = 0;
+const testimonials = document.querySelectorAll(".testimonial");
+
+setInterval(() => {
+  testimonials[index].classList.remove("active");
+  index = (index + 1) % testimonials.length;
+  testimonials[index].classList.add("active");
+}, 4000);
+</script>
+<div class="mobile-contact-bar">
+<a href="tel:+919138400890">📞 Call Now</a>
+<a href="https://wa.me/919138400890" target="_blank">💬 WhatsApp</a>
+</div>
 </body>
 </html>
