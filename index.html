@@ -158,6 +158,105 @@ footer {
     color:#c9a227;
     transform: translateY(-3px);
 }
+    /* HERO LINE BREAK CONTROL */
+    .mobile-break br {
+    display: none;
+        .social-icons {
+    margin-top:25px;
+}
+.social-icons {
+    margin-top:25px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color:#c9a227;
+    font-size:22px;
+}
+
+@media (max-width: 768px) {
+    .social-icons a {
+        margin: 8px;
+        font-size:20px;
+    }
+}
+ .insta-stats {
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:40px;
+    margin-top:40px;
+}
+
+@media (max-width:768px) {
+    .insta-stats {
+        gap:25px;
+    }
+
+    .insta-stats h3 {
+        font-size:22px !important;
+    }
+}   
+/* ============================= */
+/* MOBILE OPTIMIZATION */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 60px 15px;
+    }
+
+    .hero-images {
+        gap: 20px;
+    }
+
+    .main-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .side-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    header h1 {
+        font-size: 26px;
+        line-height: 1.4;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    ul {
+        padding-left: 18px;
+    }
+
+    .btn {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 18px;
+    }
+}  
 </style>
 
 <script type="application/ld+json">
@@ -214,9 +313,9 @@ footer {
     <img src="right.png" class="side-img">
 </div>
 <h1 class="hero-title">
-    Nikhil Chugh – Advocate<br>
-    Supreme Court Bar Association Member<br>
-    District Court Panipat
+    Nikhil Chugh – Advocate
+    <span class="mobile-break"><br>Supreme Court Bar Association Member</span>
+    <span class="mobile-break"><br>District Court Panipat</span>
 </h1>
 <p>Litigation & Advisory Practice | Panipat</p>
 
@@ -224,8 +323,7 @@ footer {
   <a href="tel:+919138400890" style="color:#fff; text-decoration:none;">+91 91384 00890</a>
 </p>
 
-<div style="margin-top:25px;">
-
+<div class="social-icons">
     <a href="https://www.instagram.com/advnikhilchugh" target="_blank"
        style="margin:0 12px; color:#c9a227; font-size:22px;">
         <i class="fab fa-instagram"></i>
@@ -303,7 +401,7 @@ As a criminal lawyer in Panipat and a constitutional law practitioner, he is com
 <section style="background:#000; color:#fff; text-align:center; padding:70px 20px;">
 <h2 style="color:#c9a227;">Instagram Presence</h2>
 
-<div style="display:flex; justify-content:center; flex-wrap:wrap; gap:40px; margin-top:40px;">
+<div class="insta-stats">
 
 <div>
 <h3 style="color:#c9a227; font-size:28px;">10K+</h3>
