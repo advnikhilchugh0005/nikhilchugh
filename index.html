@@ -158,12 +158,12 @@ footer {
     color:#c9a227;
     transform: translateY(-3px);
 }
-    /* HERO LINE BREAK CONTROL */
-    .mobile-break br {
+/* HERO LINE BREAK CONTROL */
+.mobile-break br {
     display: none;
-        .social-icons {
-    margin-top:25px;
 }
+
+/* SOCIAL ICONS */
 .social-icons {
     margin-top:25px;
 }
@@ -173,7 +173,6 @@ footer {
     color:#c9a227;
     font-size:22px;
 }
-
 @media (max-width: 768px) {
     .social-icons a {
         margin: 8px;
@@ -197,6 +196,59 @@ footer {
         font-size:22px !important;
     }
 }   
+    /* ============================= */
+/* HAMBURGER MENU */
+/* ============================= */
+
+.menu-toggle {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle div {
+    width: 28px;
+    height: 3px;
+    background: #c9a227;
+    margin: 6px 0;
+}
+
+/* SIDE PANEL */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    width: 260px;
+    height: 100%;
+    background: #000;
+    padding-top: 80px;
+    transition: 0.4s ease;
+    z-index: 1000;
+}
+
+.side-menu a {
+    display: block;
+    padding: 16px 25px;
+    color: #c9a227;
+    text-decoration: none;
+    font-size: 16px;
+    border-bottom: 1px solid #111;
+}
+
+.side-menu a:hover {
+    background: #111;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #c9a227;
+    cursor: pointer;
+}
 /* ============================= */
 /* MOBILE OPTIMIZATION */
 /* ============================= */
@@ -307,6 +359,12 @@ footer {
 </head>
 <body>
 <header>
+
+<div class="menu-toggle" onclick="openMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
 <div class="hero-images">
     <img src="left.png" class="side-img">
     <img src="profile.jpg" class="main-img">
@@ -357,7 +415,7 @@ footer {
 
 </header>
 
-<section>
+<section id="about">
  <h2>About Nikhil Chugh – Advocate in Panipat, Haryana</h2>
 <div class="card">
 <p>
@@ -370,7 +428,7 @@ As a criminal lawyer in Panipat and a constitutional law practitioner, he is com
 </div>
 </section>
 
-<section>
+<section id="practice">
 <h2>Practice Areas</h2>
 <div class="card">
 <ul>
@@ -489,6 +547,25 @@ View Google Profile
 <footer>
 © 2026 Nikhil Chugh | Advocate | All Rights Reserved
 </footer>
+    <!-- SIDE MENU -->
+<div id="sideMenu" class="side-menu">
+    <span class="close-btn" onclick="closeMenu()">×</span>
 
+    <a href="#about">About</a>
+    <a href="#practice">Practice Areas</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:+919138400890">Call Now</a>
+    <a href="https://wa.me/919138400890" target="_blank">WhatsApp</a>
+    <a href="https://www.instagram.com/advnikhilchugh" target="_blank">Instagram</a>
+</div>
+<script>
+function openMenu() {
+    document.getElementById("sideMenu").style.right = "0";
+}
+
+function closeMenu() {
+    document.getElementById("sideMenu").style.right = "-280px";
+}
+</script>
 </body>
 </html>
