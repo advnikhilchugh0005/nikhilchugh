@@ -476,10 +476,19 @@ footer {
 
 </head>
 <body>
-<!-- FIXED TOP LEFT LOGO -->
-<div class="fixed-logo">
-    <img src="logo.png" alt="Nikhil Chugh Logo">
-</div>
+/* ===== ALWAYS FIXED TOP LEFT LOGO ===== */
+.fixed-logo {
+  position: fixed !important;
+  top: 12px;
+  left: 12px;
+  z-index: 9999;
+}
+
+.fixed-logo img {
+  width: 65px;   /* mobile friendly */
+  height: auto;
+  display: block;
+}
 <header>
 
 <div class="menu-toggle" onclick="openMenu()">
