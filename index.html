@@ -403,6 +403,28 @@ footer {
     border-right: 1px solid #111;
 }
 }
+/* ============================= */
+/* FIXED TOP LEFT LOGO */
+/* ============================= */
+
+.fixed-logo {
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    z-index: 3000;
+}
+
+.fixed-logo img {
+    width: 90px;
+    height: auto;
+}
+
+/* Mobile adjustment */
+@media (max-width:768px) {
+    .fixed-logo img {
+        width: 65px;
+    }
+}
 </style>
 
 <script type="application/ld+json">
@@ -452,6 +474,10 @@ footer {
 
 </head>
 <body>
+<!-- FIXED TOP LEFT LOGO -->
+<div class="fixed-logo">
+    <img src="logo.jpg" alt="Nikhil Chugh Logo">
+</div>
 <header>
 
 <div class="menu-toggle" onclick="openMenu()">
