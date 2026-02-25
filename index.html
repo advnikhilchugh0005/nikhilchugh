@@ -326,8 +326,8 @@ footer {
 
 .back-to-top {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 100px;   /* changed */
+    right: 20px;
     width: 45px;
     height: 45px;
     background-color: #c9a227;
@@ -348,10 +348,10 @@ footer {
     color: #c9a227;
     transform: translateY(-5px);
 }
-    .floating-whatsapp {
+.floating-whatsapp {
     position: fixed;
-    bottom: 30px;
-    left: 30px;
+    bottom: 100px;  /* changed from 30px */
+    left: 20px;
     background: #25D366;
     color: #fff;
     width: 50px;
@@ -384,13 +384,27 @@ footer {
 }
 
 @media (max-width:768px) {
+
 .mobile-contact-bar {
     display: flex;
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
     background: #000;
-    z-index: 9999;
+    z-index: 9998;
+    border-top: 1px solid #c9a227;
+}
+
+.mobile-contact-bar a {
+    flex: 1;
+    text-align: center;
+    padding: 14px 0;
+    color: #c9a227;
+    text-decoration: none;
+    font-weight: 600;
+}
+
 }
 
 .mobile-contact-bar a {
@@ -401,6 +415,12 @@ footer {
     text-decoration: none;
     font-weight: 600;
     border-right: 1px solid #111;
+}
+/* Prevent content hiding behind mobile bar */
+@media (max-width:768px){
+    body {
+        padding-bottom: 80px;
+    }
 }
 </style>
 
@@ -549,7 +569,7 @@ As a criminal lawyer in Panipat and a constitutional law practitioner, he is com
 </ul>
 </div>
 </section>
-    <section class="instagram-presence'>
+    <section class="instagram-presence">
         <h2> Instagram Presence - Advocate Nikhil Chugh</h2>
         <div class="insta-feed-wrapper'>
          <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
