@@ -103,8 +103,8 @@ h2 {
     padding:35px;
     border-left:4px solid #1e3a5f;
     margin-bottom:30px;
+    box-shadow: 0 4px 10px rgba(30, 58, 95, 0.05);
 }
-
 ul {
     line-height:1.9;
 }
@@ -162,10 +162,11 @@ footer {
     transition: all 0.3s ease;
 }
 
-/* Card hover effect */
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(201,162,39,0.25);
+    transform: translateY(-6px);
+    box-shadow: 
+        0 10px 20px rgba(30, 58, 95, 0.12),
+        0 6px 6px rgba(30, 58, 95, 0.08);
 }
 
 /* Button hover refinement */
@@ -469,6 +470,17 @@ footer {
     filter: grayscale(0%);
     transform: scale(1.1);
 }
+    /* DAILYHUNT FEATURED STYLE */
+.featured-media img {
+    max-width: 190px;   /* bigger than others */
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.featured-media:hover img {
+    box-shadow: 0 10px 25px rgba(30, 58, 95, 0.25);
+    border-radius: 8px;
+}
     .title-divider {
     width: 120px;
     height: 3px;
@@ -600,6 +612,11 @@ footer {
     "headline": "Nikhil Chugh – Advocate Empowering Young Legal Minds Through Digital Legal Awareness",
     "url": "https://hindustaninsider.in/2026/02/24/nikhil-chugh-advocate-empowering-young-legal-minds-through-digital-legal-awareness/"
   }
+    {
+  "@type": "NewsArticle",
+  "headline": "Nikhil Chugh Featured in Dailyhunt Premium News",
+  "url": "https://m.dailyhunt.in/news/india/english/punjabbytes-epaper-dhb7faabc774324241990251ac4336f653/-newsid-dhb7faabc774324241990251ac4336f653_e1ba3ead5fd34dc3ad2588e989f340e4?sm=Y"
+}
 ],
      "sameAs": [
   "https://www.instagram.com/advnikhilchugh",
@@ -847,7 +864,14 @@ Advocate Nikhil Chugh has been featured across multiple national digital news pl
 <a href="https://hindustaninsider.in/2026/02/24/nikhil-chugh-advocate-empowering-young-legal-minds-through-digital-legal-awareness/" target="_blank" rel="noopener">
 <img src="https://hindustaninsider.in/favicon.ico" alt="Nikhil Chugh featured in Hindustan Insider">
 </a>
+<a href="https://m.dailyhunt.in/news/india/english/punjabbytes-epaper-dhb7faabc774324241990251ac4336f653/-newsid-dhb7faabc774324241990251ac4336f653_e1ba3ead5fd34dc3ad2588e989f340e4?sm=Y" 
+   target="_blank" 
+   rel="noopener"
+   class="featured-media">
 
+<img src="https://m.dailyhunt.in/favicon.ico" 
+     alt="Nikhil Chugh featured in Dailyhunt Premium News">
+</a>
 </div>
 </section>   
 
