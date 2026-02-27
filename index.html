@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preload"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+as="style"
+onload="this.onload=null;this.rel='stylesheet'">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -28,17 +31,15 @@
 <link rel="icon" type="image/png" sizes="16x16" href="https://nikhilchugh.in/favicon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="https://nikhilchugh.in/favicon.png">
     
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+rel="stylesheet"
+media="print"
+onload="this.media='all'">
 
 <style>
-    body {
-    animation: fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
 body {
     margin:0;
     font-family:'Poppins',sans-serif;
@@ -134,17 +135,8 @@ footer {
 }
 
 /* Hide initially */
-.main-img,
-.side-img {
-    opacity: 0;
-}
 
 /* 1️⃣ CENTER IMAGE POPS FIRST */
-.main-img {
-    transform: scale(0.7);
-    animation: centerPop 0.9s cubic-bezier(.17,.67,.35,1.2) forwards;
-    animation-delay: 0.4s;
-}
 
 /* 2️⃣ LEFT & RIGHT COME TOGETHER */
 .hero-images img:nth-child(1),
@@ -1183,16 +1175,6 @@ document.querySelector(".back-to-top").addEventListener("click", function(e) {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 </script>  
-<script src="https://unpkg.com/scrollreveal" defer></script>
-<script>
-ScrollReveal().reveal('.card', {
-    distance: '40px',
-    duration: 800,
-    easing: 'ease-in-out',
-    origin: 'bottom',
-    interval: 150
-});
-</script>
 <a href="https://wa.me/919138400890?text=Hello%20Sir,%20I%20visited%20your%20website%20and%20would%20like%20to%20book%20a%20legal%20consultation."
    class="floating-whatsapp"
    target="_blank">
@@ -1263,7 +1245,19 @@ setInterval(() => {
 </a>
 
 </div>
-<script src="https://elfsightcdn.com/platform.js" defer></script>
+<script>
+window.addEventListener("scroll", function() {
+  const elfsightSection = document.querySelector(".elfsight-app-040bf00d-949b-4b32-ae59-790b6ba229a7");
+  if (!elfsightSection) return;
+
+  if (elfsightSection.getBoundingClientRect().top < window.innerHeight) {
+    const script = document.createElement("script");
+    script.src = "https://elfsightcdn.com/platform.js";
+    script.defer = true;
+    document.body.appendChild(script);
+  }
+}, { once: true });
+</script>
     <script>
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function(e) {
