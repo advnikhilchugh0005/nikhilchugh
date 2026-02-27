@@ -642,6 +642,11 @@ footer {
 .section-title-wrapper {
     text-align: center;
 }
+a:focus,
+button:focus {
+  outline: 3px solid #d4af37;
+  outline-offset: 3px;
+}    
 </style>
 <script type="application/ld+json">
 {
@@ -752,11 +757,14 @@ footer {
 <body>
 <header>
 
-<div class="menu-toggle" onclick="openMenu()">
+<button type="button"
+        class="menu-toggle"
+        onclick="openMenu()"
+        aria-label="Open navigation menu">
     <div></div>
     <div></div>
     <div></div>
-</div>
+</button>
 <div class="hero-images">
    <img src="left.webp"
      class="side-img"
@@ -784,10 +792,10 @@ Nikhil Chugh – Advocate
 
 <div class="title-divider"></div>
 
-<h2 class="hero-subtitle">
+<p class="hero-subtitle">
     Supreme Court Bar Association Member<br>
     District Court Panipat
-</h2>
+</p>
 <p>
 Criminal & Civil Advocate in Panipat, Haryana | Trial Courts, High Court & Supreme Court Matters
 </p>
@@ -801,37 +809,47 @@ Criminal & Civil Advocate in Panipat, Haryana | Trial Courts, High Court & Supre
 <p style="margin-top:8px; font-weight:500;">
   <a href="tel:+919138400890" style="color:#f5f5f5; text-decoration:none;">+91 91384 00890</a>
 </p>
-
 <div class="social-icons">
-    <a href="https://www.instagram.com/advnikhilchugh" target="_blank"
+
+    <a href="https://www.instagram.com/advnikhilchugh"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Visit Instagram profile of Advocate Nikhil Chugh"
        style="margin:0 12px; font-size:22px;">
-        <i class="fab fa-instagram"></i>
+<i class="fab fa-instagram" aria-hidden="true"></i>
     </a>
 
-    <a href="https://www.youtube.com/@advnikhilchugh" target="_blank"
-       style="margin:0 12px;  font-size:22px;">
-        <i class="fab fa-youtube"></i>
-    </a>
-
-    <a href="https://www.linkedin.com/in/advocatenikhilchugh/" target="_blank"
+    <a href="https://www.youtube.com/@advnikhilchugh"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Visit YouTube channel of Advocate Nikhil Chugh"
        style="margin:0 12px; font-size:22px;">
-        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-youtube" aria-hidden="true"></i>
     </a>
 
-    <!-- Call -->
-   <a href="tel:+919138400890"
-   style="margin:0 12px; color:#25D366; font-size:22px;">
-    <i class="fas fa-phone"></i>
-</a>
+    <a href="https://www.linkedin.com/in/advocatenikhilchugh/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Visit LinkedIn profile of Advocate Nikhil Chugh"
+       style="margin:0 12px; font-size:22px;">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+    </a>
 
-    <!-- WhatsApp -->
-<a href="https://wa.me/919138400890"
-   target="_blank"
-   rel="noopener noreferrer"
-   style="margin:0 12px;  font-size:22px;">
-    <i class="fab fa-whatsapp"></i>
-</a></div>
+    <a href="tel:+919138400890"
+       aria-label="Call Advocate Nikhil Chugh"
+       style="margin:0 12px; color:#25D366; font-size:22px;">
+<i class="fas fa-phone" aria-hidden="true"></i>
+    </a>
 
+    <a href="https://wa.me/919138400890"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Chat on WhatsApp with Advocate Nikhil Chugh"
+       style="margin:0 12px; font-size:22px;">
+       <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+</div>
 <a href="https://wa.me/919138400890?text=Hello%20Sir,%20I%20visited%20your%20website%20and%20would%20like%20to%20book%20a%20legal%20consultation."
    class="btn"
    target="_blank"
@@ -935,45 +953,48 @@ Advocate Nikhil Chugh has been featured across multiple national digital news pl
 <div class="media-logos">
 <a href="https://m.dailyhunt.in/news/india/english/punjabbytes-epaper-dhb7faabc774324241990251ac4336f653/-newsid-dhb7faabc774324241990251ac4336f653_e1ba3ead5fd34dc3ad2588e989f340e4?sm=Y" 
    target="_blank" 
-   rel="noopener"
+   rel="noopener noreferrer"
    class="featured-media">
 
 <img src="dailyhunt.png"
+     width="190"
+     height="80"
+     loading="lazy"
      alt="Nikhil Chugh featured in Dailyhunt Premium News">
 </a>
-<a href="https://www.dailydistrictnews.co.in/2026/02/nikhil-chugh-advocate-empowering-young.html" target="_blank" rel="noopener">
+<a href="https://www.dailydistrictnews.co.in/2026/02/nikhil-chugh-advocate-empowering-young.html" target="_blank"rel="noopener noreferrer">
 <img src="https://www.dailydistrictnews.co.in/favicon.ico" alt="Nikhil Chugh featured in Daily District News">
 </a>
 
-<a href="https://www.newswireofindia.co.in/2026/02/nikhil-chugh-advocate-empowering-young.html" target="_blank" rel="noopener">
+<a href="https://www.newswireofindia.co.in/2026/02/nikhil-chugh-advocate-empowering-young.html" target="_blank" rel="noopener noreferrer">
 <img src="https://www.newswireofindia.co.in/favicon.ico" alt="Nikhil Chugh featured in News Wire of India">
 </a>
 
-<a href="https://www.99news.co.in/2026/02/nikhil-chugh-advocate-empowering-young.html" target="_blank" rel="noopener">
+<a href="https://www.99news.co.in/2026/02/nikhil-chugh-advocate-empowering-young.html" target="_blank" rel="noopener noreferrer">
 <img src="https://www.99news.co.in/favicon.ico" alt="Nikhil Chugh featured in 99 News">
 </a>
 
-<a href="https://www.insidernewstimes.co.in/2026/02/nikhil-chugh-advocate-empowering-young.html" target="_blank" rel="noopener">
+<a href="https://www.insidernewstimes.co.in/2026/02/nikhil-chugh-advocate-empowering-young.html" target="_blank" rel="noopener noreferrer">
 <img src="https://www.insidernewstimes.co.in/favicon.ico" alt="Nikhil Chugh featured in Insider News Times">
 </a>
 
-<a href="https://www.newstoday24x7.co.in/2026/02/nikhil-chugh-advocate-empowering-young.html" target="_blank" rel="noopener">
+<a href="https://www.newstoday24x7.co.in/2026/02/nikhil-chugh-advocate-empowering-young.html" target="_blank" rel="noopener noreferrer">
 <img src="https://www.newstoday24x7.co.in/favicon.ico" alt="Nikhil Chugh featured in News Today 24x7">
 </a>
 
-<a href="https://www.todaynewsstandard.co.in/2026/02/nikhil-chugh-advocate-empowering-young.html" target="_blank" rel="noopener">
+<a href="https://www.todaynewsstandard.co.in/2026/02/nikhil-chugh-advocate-empowering-young.html" target="_blank" rel="noopener noreferrer">
 <img src="https://www.todaynewsstandard.co.in/favicon.ico" alt="Nikhil Chugh featured in Today News Standard">
 </a>
 
-<a href="https://www.timesnewsexpress.co.in/2026/02/nikhil-chugh-advocate-empowering-young.html" target="_blank" rel="noopener">
+<a href="https://www.timesnewsexpress.co.in/2026/02/nikhil-chugh-advocate-empowering-young.html" target="_blank" rel="noopener noreferrer">
 <img src="https://www.timesnewsexpress.co.in/favicon.ico" alt="Nikhil Chugh featured in Times News Express">
 </a>
 
-<a href="https://www.therepublicnews.co.in/2026/02/nikhil-chugh-advocate-empowering-young.html" target="_blank" rel="noopener">
+<a href="https://www.therepublicnews.co.in/2026/02/nikhil-chugh-advocate-empowering-young.html" target="_blank" rel="noopener noreferrer">
 <img src="https://www.therepublicnews.co.in/favicon.ico" alt="Nikhil Chugh featured in The Republic News">
 </a>
 
-<a href="https://www.theindiaforbesnews.co.in/2026/02/nikhil-chugh-advocate-empowering-young.html" target="_blank" rel="noopener">
+<a href="https://www.theindiaforbesnews.co.in/2026/02/nikhil-chugh-advocate-empowering-young.html" target="_blank" rel="noopener noreferrer">
 <img src="https://www.theindiaforbesnews.co.in/favicon.ico" alt="Nikhil Chugh featured in The India Forbes News">
 </a>
 
@@ -986,11 +1007,11 @@ Advocate Nikhil Chugh has been featured across multiple national digital news pl
 
 </a>
 
-<a href="https://primenewsofindia.com/2026/02/24/nikhil-chugh-advocate-empowering-young-legal-minds-through-digital-legal-awareness/" target="_blank" rel="noopener">
+<a href="https://primenewsofindia.com/2026/02/24/nikhil-chugh-advocate-empowering-young-legal-minds-through-digital-legal-awareness/" target="_blank" rel="noopener noreferrer">
 <img src="https://primenewsofindia.com/favicon.ico" alt="Nikhil Chugh featured in Prime News of India">
 </a>
 
-<a href="https://hindustaninsider.in/2026/02/24/nikhil-chugh-advocate-empowering-young-legal-minds-through-digital-legal-awareness/" target="_blank" rel="noopener">
+<a href="https://hindustaninsider.in/2026/02/24/nikhil-chugh-advocate-empowering-young-legal-minds-through-digital-legal-awareness/" target="_blank" rel="noopener noreferrer">
 <img src="https://hindustaninsider.in/favicon.ico" alt="Nikhil Chugh featured in Hindustan Insider">
 </a>
 
@@ -1133,12 +1154,16 @@ Disclaimer
 © 2026 Nikhil Chugh | Advocate | All Rights Reserved
 </footer>
     <!-- BACK TO TOP BUTTON -->
-<a href="#" class="back-to-top">
-    <i class="fas fa-arrow-up"></i>
+<a href="#"
+   class="back-to-top"
+   aria-label="Scroll back to top">
+  <i class="fas fa-arrow-up" aria-hidden="true"></i>
 </a>
     <!-- SIDE MENU -->
 <div id="sideMenu" class="side-menu">
-    <span class="close-btn" onclick="closeMenu()">×</span>
+    <button class="close-btn"
+        onclick="closeMenu()"
+        aria-label="Close navigation menu">×</button>
 
     <a href="#about">About</a>
     <a href="#practice">Practice Areas</a>
@@ -1146,8 +1171,17 @@ Disclaimer
     <a href="#news-articles">Media Coverage</a>
     <a href="#contact">Contact</a>
     <a href="tel:+919138400890">Call Now</a>
-    <a href="https://wa.me/919138400890" target="_blank">WhatsApp</a>
-    <a href="https://www.instagram.com/advnikhilchugh" target="_blank">Instagram</a>
+   <a href="https://wa.me/919138400890"
+   target="_blank"
+   rel="noopener noreferrer">
+   WhatsApp
+</a>
+
+<a href="https://www.instagram.com/advnikhilchugh"
+   target="_blank"
+   rel="noopener noreferrer">
+   Instagram
+</a>
 </div>
 <script>
 function openMenu() {
@@ -1177,8 +1211,10 @@ document.querySelector(".back-to-top").addEventListener("click", function(e) {
 </script>  
 <a href="https://wa.me/919138400890?text=Hello%20Sir,%20I%20visited%20your%20website%20and%20would%20like%20to%20book%20a%20legal%20consultation."
    class="floating-whatsapp"
-   target="_blank">
-    <i class="fab fa-whatsapp"></i>
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Floating WhatsApp consultation button">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
 </a>
 <script>
 const counters = document.querySelectorAll('.counter');
@@ -1235,13 +1271,13 @@ setInterval(() => {
 <div class="mobile-contact-bar">
 
 <a href="tel:+919138400890" style="color:#25D366;">
-    <i class="fas fa-phone"></i> Call Now
+    <i class="fas fa-phone" aria-hidden="true"></i> Call Now
 </a>
 <a href="https://wa.me/919138400890?text=Hello%20Sir,%20I%20visited%20your%20website%20and%20would%20like%20to%20book%20a%20legal%20consultation."
    style="color:#25D366;"
    target="_blank"
    rel="noopener">
-   <i class="fab fa-whatsapp"></i> WhatsApp
+  <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
 </a>
 
 </div>
