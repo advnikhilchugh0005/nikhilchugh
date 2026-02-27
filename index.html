@@ -133,27 +133,14 @@ footer {
     margin-bottom:40px;
     position: relative;
 }
-
-/* Hide initially */
-
-/* 1️⃣ CENTER IMAGE POPS FIRST */
-
-/* 2️⃣ LEFT & RIGHT COME TOGETHER */
-.hero-images img:nth-child(1),
-.hero-images img:nth-child(3) {
-    animation: slideTogether 0.8s ease-out forwards;
-    animation-delay: 1.2s;   /* SAME delay = SAME TIME */
+.hero-images img {
+    animation: fadeIn 0.6s ease-in-out;
 }
 
-/* Starting positions */
-.hero-images img:nth-child(1) {
-    transform: translateX(-140px);
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
-
-.hero-images img:nth-child(3) {
-    transform: translateX(140px);
-}
-
 /* Keyframes */
 
 @keyframes centerPop {
@@ -1282,19 +1269,6 @@ setInterval(() => {
 
 </div>
 <script>
-window.addEventListener("scroll", function() {
-  const elfsightSection = document.querySelector(".elfsight-app-040bf00d-949b-4b32-ae59-790b6ba229a7");
-  if (!elfsightSection) return;
-
-  if (elfsightSection.getBoundingClientRect().top < window.innerHeight) {
-    const script = document.createElement("script");
-    script.src = "https://elfsightcdn.com/platform.js";
-    script.defer = true;
-    document.body.appendChild(script);
-  }
-}, { once: true });
-</script>
-    <script>
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function(e) {
     e.preventDefault();
@@ -1329,5 +1303,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
  ]
 }
 </script>
+<script src="https://elfsightcdn.com/platform.js" defer></script>
 </body>
 </html>
