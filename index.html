@@ -755,7 +755,7 @@ footer {
   ]
 }
 </script>
-
+<link rel="preload" as="image" href="profile.webp">
 </head>
 <body>
 <header>
@@ -1183,7 +1183,7 @@ document.querySelector(".back-to-top").addEventListener("click", function(e) {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 </script>  
-    <script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://unpkg.com/scrollreveal" defer></script>
 <script>
 ScrollReveal().reveal('.card', {
     distance: '40px',
