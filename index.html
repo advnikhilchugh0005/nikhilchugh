@@ -128,45 +128,41 @@ footer {
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:80px; /* More space between images */
+    gap:80px;
     margin-bottom:40px;
-}
-/* ============================= */
-/* PREMIUM HERO ANIMATION */
-/* ============================= */
-
-.hero-images {
     position: relative;
 }
 
-/* INITIAL HIDDEN STATE */
+/* Hide initially */
 .main-img,
 .side-img {
     opacity: 0;
 }
 
-/* CENTER IMAGE POP FIRST */
+/* 1️⃣ CENTER IMAGE POPS FIRST */
 .main-img {
-    transform: scale(0.75);
+    transform: scale(0.7);
     animation: centerPop 0.9s cubic-bezier(.17,.67,.35,1.2) forwards;
     animation-delay: 0.4s;
 }
 
-/* LEFT IMAGE SLIDE */
-.hero-images img:nth-child(1) {
-    transform: translateX(-120px);
-    animation: slideLeft 0.8s ease-out forwards;
-    animation-delay: 1.2s;
-}
-
-/* RIGHT IMAGE SLIDE */
+/* 2️⃣ LEFT & RIGHT COME TOGETHER */
+.hero-images img:nth-child(1),
 .hero-images img:nth-child(3) {
-    transform: translateX(120px);
-    animation: slideRight 0.8s ease-out forwards;
-    animation-delay: 1.5s;
+    animation: slideTogether 0.8s ease-out forwards;
+    animation-delay: 1.2s;   /* SAME delay = SAME TIME */
 }
 
-/* KEYFRAMES */
+/* Starting positions */
+.hero-images img:nth-child(1) {
+    transform: translateX(-140px);
+}
+
+.hero-images img:nth-child(3) {
+    transform: translateX(140px);
+}
+
+/* Keyframes */
 
 @keyframes centerPop {
     to {
@@ -175,14 +171,7 @@ footer {
     }
 }
 
-@keyframes slideLeft {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideRight {
+@keyframes slideTogether {
     to {
         opacity: 1;
         transform: translateX(0);
@@ -213,9 +202,6 @@ footer {
     opacity:1;
 }
     /* Smooth transitions globally */
-* {
-    transition: all 0.3s ease;
-}
 
 .card:hover {
     transform: translateY(-6px);
