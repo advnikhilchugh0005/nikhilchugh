@@ -631,6 +631,58 @@ button:focus {
   outline: 3px solid #d4af37;
   outline-offset: 3px;
 }    
+      /* DISCLAIMER POPUP STYLE */
+
+.disclaimer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.disclaimer-box {
+  background: #ffffff;
+  width: 90%;
+  max-width: 500px;
+  padding: 35px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+.disclaimer-box h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 15px;
+  color: #1e3a5f;
+}
+
+.disclaimer-box p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.accept-btn {
+  background: #d4af37;
+  color: #000;
+  padding: 10px 22px;
+  border: none;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.accept-btn:hover {
+  background: #1e3a5f;
+  color: #ffffff;
+}
 </style>
 <script type="application/ld+json">
 {
@@ -1440,6 +1492,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   }
  ]
 }
+</script>
+<!-- DISCLAIMER POPUP -->
+<div id="disclaimerModal" class="disclaimer-overlay">
+  <div class="disclaimer-box">
+    <h2>Website Disclaimer</h2>
+    <p>
+      This website is intended solely for informational purposes and does not constitute solicitation, advertisement, or legal advice. 
+      By clicking "Understood & Continue", you acknowledge that you are seeking information voluntarily and that there has been no solicitation or inducement by Advocate Nikhil Chugh.
+    </p>
+
+    <div class="disclaimer-buttons">
+      <button onclick="acceptDisclaimer()" class="accept-btn">
+        Understood & Continue
+      </button>
+    </div>
+  </div>
+</div>
+      <script>
+function acceptDisclaimer() {
+  sessionStorage.setItem("disclaimerAccepted", "yes");
+  document.getElementById("disclaimerModal").style.display = "none";
+}
+
+window.onload = function() {
+  if (sessionStorage.getItem("disclaimerAccepted") === "yes") {
+    document.getElementById("disclaimerModal").style.display = "none";
+  }
+};
 </script>
 </body>
 </html>
