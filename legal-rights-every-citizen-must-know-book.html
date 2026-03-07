@@ -8,7 +8,8 @@
 <title>Legal Rights Every Citizen Must Know | Book by Nikhil Chugh</title>
 
 <meta name="description" content="Legal Rights Every Citizen Must Know is a legal awareness book by Advocate Nikhil Chugh explaining FIR procedure, bail law and police powers under India's new criminal laws including BNSS 2023.">
-
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="canonical" href="https://nikhilchugh.in/legal-rights-every-citizen-must-know-book.html">
 
 <meta name="robots" content="index, follow">
@@ -49,7 +50,38 @@ background:#1e3a5f;
 color:#ffffff;
 transform:translateY(-2px);
 }
+.btn i{
+margin-right:8px;
+font-size:16px;
+}
+.book-container{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:60px;
+flex-wrap:wrap;
+margin-top:40px;
+}
 
+.book-cover img{
+max-width:260px;
+border-radius:8px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.book-details{
+max-width:600px;
+text-align:left;
+}
+.book-details p{
+line-height:1.8;
+margin-bottom:16px;
+}
+@media(max-width:768px){
+.book-details{
+text-align:center;
+}
+} 
 </style>
 </head>
 
@@ -70,21 +102,26 @@ Nikhil Chugh
 </header>
 
 <section style="max-width:1000px;margin:auto;padding:80px 20px;text-align:center;">
+<div class="book-container">
 
+<div class="book-cover">
 <img src="book-cover.webp"
-width="320"
-alt="Legal Rights Every Citizen Must Know book cover"
-style="max-width:260px;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.2);">
+alt="Legal Rights Every Citizen Must Know book cover">
+</div>
 
-<h2 style="margin-top:30px;">About the Book</h2>
-<p style="max-width:650px;margin:auto;font-size:17px;line-height:1.7;">
+<div class="book-details">
+
+<h2>About the Book</h2>
+
+<p>
 <em>Legal Rights Every Citizen Must Know is written by Advocate Nikhil Chugh, a practicing criminal and constitutional lawyer based in Panipat, Haryana.</em>
 </p>
-<p style="max-width:650px;margin:auto;font-size:17px;line-height:1.7;">
+
+<p>
 Legal Rights Every Citizen Must Know is a practical legal awareness guide explaining important aspects of criminal procedure in India including FIR registration, arrest procedures, bail law and police powers.
 </p>
 
-<p style="max-width:650px;margin:auto;font-size:17px;line-height:1.7;">
+<p>
 The book also explains constitutional safeguards available to citizens under Articles 20, 21 and 22 of the Constitution of India and highlights the changes introduced through India’s new criminal laws such as the Bharatiya Nyaya Sanhita (BNS), Bharatiya Nagarik Suraksha Sanhita (BNSS) and Bharatiya Sakshya Adhiniyam (BSA).
 </p>
 
@@ -96,24 +133,28 @@ The book also explains constitutional safeguards available to citizens under Art
 target="_blank"
 rel="noopener noreferrer"
 class="btn">
-Google Books
+<i class="fab fa-google"></i> Google Books
 </a>
 
 <a href="https://books.apple.com/us/book/id6760150497"
 target="_blank"
 rel="noopener noreferrer"
 class="btn">
-Apple Books
+<i class="fab fa-apple"></i> Apple Books
 </a>
 
 <a href="#"
 target="_blank"
 rel="noopener noreferrer"
 class="btn">
-Amazon Kindle
+<i class="fab fa-amazon"></i> Amazon Kindle
 </a>
 
 </div>
+
+</div>
+</div>
+
 <script type="application/ld+json">
 {
  "@context":"https://schema.org",
@@ -121,7 +162,8 @@ Amazon Kindle
  "name":"Nikhil Chugh",
  "url":"https://nikhilchugh.in/",
  "jobTitle":"Advocate",
- "description":"Criminal and Constitutional Lawyer based in Panipat, Haryana",
+ "image":"https://nikhilchugh.in/nikhil-chugh.webp",
+"description":"Criminal and Constitutional Lawyer based in Panipat, Haryana",
  "sameAs":[
    "https://www.instagram.com/advnikhilchugh",
    "https://www.linkedin.com/in/advocatenikhilchugh/",
@@ -135,6 +177,7 @@ Amazon Kindle
  "@context":"https://schema.org",
  "@type":"Book",
  "@id":"https://nikhilchugh.in/legal-rights-every-citizen-must-know-book.html",
+ "mainEntityOfPage":"https://nikhilchugh.in/legal-rights-every-citizen-must-know-book.html",
  "name":"Legal Rights Every Citizen Must Know",
  "image":"https://nikhilchugh.in/book-cover.webp",
  "inLanguage":"en",
@@ -150,21 +193,29 @@ Amazon Kindle
       "https://www.youtube.com/@advnikhilchugh"
    ]
  },
- "publisher":{
+"publisher":{
    "@type":"Organization",
-   "name":"Nikhil Chugh"
- },
+   "name":"Nikhil Chugh",
+   "url":"https://nikhilchugh.in/"
+},
  "url":"https://nikhilchugh.in/legal-rights-every-citizen-must-know-book.html",
- "offers":[
-   {
-     "@type":"Offer",
-     "url":"https://books.apple.com/us/book/id6760150497"
-   },
-   {
-     "@type":"Offer",
-     "url":"https://books.google.co.in/books?id=3sXGEQAAQBAJ"
-   }
- ]
+"offers":[
+ {
+  "@type":"Offer",
+  "name":"Google Books",
+  "url":"https://books.google.co.in/books?id=3sXGEQAAQBAJ"
+ },
+ {
+  "@type":"Offer",
+  "name":"Apple Books",
+  "url":"https://books.apple.com/us/book/id6760150497"
+ },
+ {
+  "@type":"Offer",
+  "name":"Amazon Kindle",
+  "url":"https://www.amazon.in/dp/XXXX"
+ }
+]
 }
 </script>
   <script type="application/ld+json">
