@@ -15,7 +15,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
+html{
+scroll-behavior:smooth;
+}
 body{
 margin:0;
 font-family:'Poppins',sans-serif;
@@ -138,7 +140,44 @@ text-decoration:none;
 .wiki-infobox a:hover{
 text-decoration:underline;
 }
- 
+ /* SCROLL TO TOP BUTTON */
+
+#scrollTopBtn{
+position:fixed;
+bottom:30px;
+right:25px;
+z-index:999;
+background:#1e3a5f;
+color:#ffffff;
+border:none;
+outline:none;
+width:45px;
+height:45px;
+border-radius:50%;
+font-size:20px;
+cursor:pointer;
+opacity:0;
+visibility:hidden;
+box-shadow:0 4px 10px rgba(0,0,0,0.25);
+transition:all 0.3s ease;
+}
+
+#scrollTopBtn:hover{
+background:#d4af37;
+color:#000;
+transform:translateY(-3px);
+}
+
+/* Mobile optimization */
+@media(max-width:600px){
+#scrollTopBtn{
+bottom:20px;
+right:15px;
+width:40px;
+height:40px;
+font-size:18px;
+}
+}
 </style>
 
 <script type="application/ld+json">
@@ -233,7 +272,7 @@ Legal Rights Every Citizen Must Know
 
 <div class="wiki-article">
 
-<h2>Biography of Nikhil Chugh</h2>
+<h2>Nikhil Chugh – Biography</h2>
 
 <p>
 <b><a href="https://nikhilchugh.in" style="text-decoration:none;color:#0645ad;">Nikhil Chugh</a></b> (born 23 August 1999) is an Indian advocate, legal educator and author based in Panipat, Haryana. He is a member of the Supreme Court Bar Association and practices primarily in criminal law, bail matters, constitutional litigation and cheque bounce cases under Section 138 of the Negotiable Instruments Act.
@@ -352,3 +391,28 @@ Official biography page of Nikhil Chugh, Advocate Panipat, Haryana.
 </p>
 © 2026 Nikhil Chugh | Advocate
 </footer>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Back to top">↑</button>
+<script>
+
+let scrollBtn = document.getElementById("scrollTopBtn");
+
+window.onscroll = function(){
+if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
+scrollBtn.style.opacity = "1";
+scrollBtn.style.visibility = "visible";
+} else {
+scrollBtn.style.opacity = "0";
+scrollBtn.style.visibility = "hidden";
+}
+};
+
+function scrollToTop(){
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+}
+
+</script>
+</body>
+</html>
