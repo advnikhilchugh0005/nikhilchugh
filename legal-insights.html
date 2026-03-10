@@ -38,43 +38,70 @@ section {
     padding:60px 20px;
 }
 
-.article-card {
-    background:#f8f8f8;
-    padding:30px;
-    margin-bottom:30px;
-    border-left:4px solid #c9a227;
-    transition:0.3s ease;
+.article-card{
+background:#f8f8f8;
+padding:25px;
+border-top:4px solid #c9a227;
+transition:0.3s ease;
+border-radius:4px;
 }
-
-.article-card:hover {
-    transform:translateY(-5px);
-    box-shadow:0 15px 35px rgba(201,162,39,0.2);
-}
-
-.article-card h2 {
-    margin-top:0;
+    
+.article-card h3{
+margin-top:0;
+font-size:20px;
 }
 
 .article-card a {
     text-decoration:none;
     color:#000;
 }
-
-.btn {
-    display:inline-block;
-    margin-top:15px;
-    padding:10px 20px;
-    background:#c9a227;
-    color:#000;
-    text-decoration:none;
-    font-weight:600;
+.article-card a{
+font-weight:600;
+}
+    
+.btn{
+display:inline-block;
+margin-top:15px;
+padding:10px 22px;
+background:#c9a227;
+color:#000;
+text-decoration:none;
+font-weight:600;
+border-radius:3px;
+transition:0.25s;
 }
 
+.btn:hover{
+background:#b8961d;
+}
 footer {
     background:#000;
     color:#fff;
     text-align:center;
     padding:25px;
+}
+    .article-grid {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.category-title{
+font-family:'Playfair Display',serif;
+font-size:28px;
+margin-top:70px;
+border-bottom:2px solid #c9a227;
+padding-bottom:10px;
+}
+    
+.article-card:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 35px rgba(0,0,0,0.1);
+}
+
+    .article-card{
+cursor:pointer;
 }
 </style>
 
@@ -134,92 +161,116 @@ Advocate Nikhil Chugh
 </a>, 
 member of the Supreme Court Bar Association.
 </p>
+    <p style="margin-top:10px;font-size:14px;">
+Explore legal awareness articles by <a href="nikhil-chugh.html">Advocate Nikhil Chugh</a>.
+</p>
 <a href="index.html" class="btn">← Back to Home</a>
 </header>
 
-<section>
-    
-<div class="article-card">
-<h2>Top 5 Legal Rights Everyone Must Know</h2>
-<p>Essential constitutional and procedural rights every citizen in India must understand to protect themselves during arrest, investigation and legal proceedings.</p>
+  <section>
+
+<div class="article-card" style="background:#fff7e1;border-top:6px solid #c9a227;box-shadow:0 8px 25px rgba(0,0,0,0.1);">
+<h2>Featured Article</h2>
+<h3>Top 5 Legal Rights Everyone Must Know</h3>
+<p>A practical guide explaining the most important legal protections every citizen should know in India.</p>
 <a href="top-5-legal-rights-everyone-must-know.html" class="btn">Read Article</a>
-<p>
-Written by <a href="nikhil-chugh.html">Nikhil Chugh – Advocate</a>
-</p>    
 </div>
+
+<h2 class="category-title">Fundamental Rights</h2>
+
+<div class="article-grid">
+
 <div class="article-card">
-<h2>Rights of an Accused in India</h2>
-<p>A detailed legal guide explaining constitutional protections under Articles 14, 20, 21 and 22 of the Constitution of India. Learn about bail rights, protection against self-incrimination and fair trial guarantees.</p>
-<a href="rights-of-accused-india.html" 
-   title="Rights of an Accused in India - Legal Guide by Advocate Nikhil Chugh" 
-   class="btn">Read Article</a>
-</div>    
-    <div class="article-card">
-<h2>FIR Under BNSS 2023</h2>
-<p>Complete legal guide explaining FIR procedure under Section 173 of Bharatiya Nagarik Suraksha Sanhita, 2023 including Zero FIR, refusal remedies and legal rights of citizens.</p>
-<a href="fir-under-bnss-2023.html" 
-   title="FIR Under BNSS 2023 - Legal Guide by Nikhil Chugh, Advocate | Supreme Court Bar Association Member | Panipat District Court"
-   class="btn">Read Article</a>
-</div>
- <div class="article-card">
-<h2>What To Do If Police Call You for Inquiry? – Complete Legal Guide</h2>
-
-<p>
-Received a police inquiry call? Learn your legal rights, whether you must visit the police station, and how to protect yourself legally in India.
+<h3>Rights of an Accused in India</h3>
+<p>Constitutional protections under Articles 14, 20, 21 and 22.</p>
+<p style="font-size:13px;color:#777;">
+By Nikhil Chugh, Advocate | Supreme Court Bar Association Member
 </p>
+<a href="rights-of-accused-india.html" class="btn">Read Article</a>
+</div>
 
+</div>
+<h2 class="category-title">Police & FIR Law</h2>
+
+<div class="article-grid">
+
+<div class="article-card">
+<h3>FIR Under BNSS 2023</h3>
+<p>Legal guide explaining FIR procedure and Zero FIR.</p>
+     <p style="font-size:13px;color:#777;">
+By Nikhil Chugh, Advocate | Supreme Court Bar Association Member
+</p>
+<a href="fir-under-bnss-2023.html" class="btn">Read Article</a>
+</div>
+
+<div class="article-card">
+<h3>Can Police Refuse to Register an FIR?</h3>
+<p>Know your legal rights if police refuse FIR.</p>
+     <p style="font-size:13px;color:#777;">
+By Nikhil Chugh, Advocate | Supreme Court Bar Association Member
+</p>
+<a href="can-police-refuse-to-register-fir.html" class="btn">Read Article</a>
+</div>
+
+<div class="article-card">
+<h3>What Happens After FIR is Filed?</h3>
+<p>Step-by-step criminal investigation process.</p>
+     <p style="font-size:13px;color:#777;">
+By Nikhil Chugh, Advocate | Supreme Court Bar Association Member
+</p>
+<a href="what-happens-after-fir-in-india.html" class="btn">Read Article</a>
+</div>
+
+</div>
+
+
+<h2 class="category-title">Bail Law</h2>
+
+<div class="article-grid">
+
+<div class="article-card">
+<h3>Anticipatory Bail – Complete Guide</h3>
+<p>Understand procedure, conditions and safeguards.</p>
+     <p style="font-size:13px;color:#777;">
+By Nikhil Chugh, Advocate | Supreme Court Bar Association Member
+</p>
+<a href="anticipatory-bail-complete-guide-bnss.html" class="btn">Read Article</a>
+</div>
+
+</div>
+
+
+<h2 class="category-title">Financial Offences</h2>
+
+<div class="article-grid">
+
+<div class="article-card">
+<h3>Cheque Bounce Case – Section 138 NI Act</h3>
+<p>Complete guide on notice, trial and defence.</p>
+     <p style="font-size:13px;color:#777;">
+By Nikhil Chugh, Advocate | Supreme Court Bar Association Member
+</p>
+<a href="cheque-bounce-case-section-138-ni-act.html" class="btn">Read Article</a>
+</div>
+
+</div>
+
+
+<h2 class="category-title">Police Inquiry</h2>
+
+<div class="article-grid">
+
+<div class="article-card">
+<h3>What To Do If Police Call You for Inquiry?</h3>
+<p>Understand your legal rights during police inquiry.</p>
+     <p style="font-size:13px;color:#777;">
+By Nikhil Chugh, Advocate | Supreme Court Bar Association Member
+</p>
 <a href="police-inquiry-legal-guide.html" class="btn">Read Article</a>
-</div>   
-  <div class="article-card">
-<h2>Anticipatory Bail: Complete Guide Under BNSS (2026)</h2>
-
-<p>
-Understand the complete procedure, court considerations, conditions and legal safeguards relating to anticipatory bail under BNSS 2023.
-</p>
-
-<a href="anticipatory-bail-complete-guide-bnss.html" class="btn">
-Read Article
-</a>
-</div>  
- <div class="article-card">
-<h2>Cheque Bounce Case – Complete Guide Under Section 138 NI Act</h2>
-
-<p>
-Understand the legal procedure, notice requirements, punishment and defence strategies in cheque bounce cases under the Negotiable Instruments Act.
-</p>
-
-<a href="cheque-bounce-case-section-138-ni-act.html" class="btn">
-Read Article
-</a>
 </div>
-<div class="article-card">
-<h2>What Happens After FIR is Filed in India?</h2>
-
-<p>
-A step-by-step guide explaining police investigation, arrest rules, chargesheet filing and criminal trial procedure after an FIR is registered.
-</p>
-
-<a href="what-happens-after-fir-in-india.html" class="btn">
-Read Article
-</a>
-</div>
-<div class="article-card">
-
-<h2>Can Police Refuse to Register an FIR in India?</h2>
-
-<p>
-Know your legal rights if the police refuse to register an FIR. Learn about the law under BNSS 2023, the concept of Zero FIR, and the Supreme Court ruling in Lalita Kumari v. State of Uttar Pradesh.
-</p>
-
-<a href="can-police-refuse-to-register-fir.html"
-title="Can Police Refuse to Register an FIR in India – Legal Guide by Advocate Nikhil Chugh"
-class="btn">Read Article</a>
-
-<p>
-Written by <a href="nikhil-chugh.html">Nikhil Chugh – Advocate</a>
-</p>
 
 </div>
+
 </section>
 
 <footer>
