@@ -112,6 +112,18 @@ transition:0.3s;
 background:#ffffff;
 color:#1e3a5f;
 } 
+ .pothi-logo{
+display:block;
+margin:15px auto 10px;
+max-width:120px;
+}
+
+.paperback-note{
+margin-top:10px;
+font-size:14px;
+color:#1e3a5f;
+font-weight:600;
+}
 </style>
 </head>
 
@@ -193,7 +205,22 @@ rel="noopener noreferrer"
 class="btn">
 <i class="fab fa-amazon"></i> Amazon Kindle
 </a>
+<a href="https://store.pothi.com/book/nikhil-chugh-legal-rights-every-citizen-must-know/"
+target="_blank"
+rel="noopener noreferrer"
+class="btn">
+<i class="fas fa-book"></i> Paperback (Pothi)
+</a>
+ <p class="paperback-note">
+Paperback copies available via Pothi.com
+</p>
 
+<a href="https://store.pothi.com/book/nikhil-chugh-legal-rights-every-citizen-must-know/"
+target="_blank">
+<img src="pothi-logo.png"
+alt="Pothi.com Logo"
+class="pothi-logo">
+</a>
 </div>
 
 </div>
@@ -208,7 +235,10 @@ class="btn">
  "name":"Legal Rights Every Citizen Must Know",
  "image":"https://nikhilchugh.in/book-cover.webp",
  "inLanguage":"en",
- "bookFormat":"https://schema.org/EBook",
+"bookFormat":[
+"https://schema.org/EBook",
+"https://schema.org/Paperback"
+],
  "datePublished":"2026",
 
  "author":{
@@ -231,12 +261,12 @@ class="btn">
  "url":"https://nikhilchugh.in/legal-rights-every-citizen-must-know-book.html",
 
  "sameAs":[
-  "https://www.amazon.in/dp/B0GRPRY64C",
-  "https://books.google.co.in/books?id=3sXGEQAAQBAJ",
-  "https://books.apple.com/us/book/id6760150497"
- ],
-
- "offers":[
+"https://www.amazon.in/dp/B0GRPRY64C",
+"https://books.google.co.in/books?id=3sXGEQAAQBAJ",
+"https://books.apple.com/us/book/id6760150497",
+"https://store.pothi.com/book/nikhil-chugh-legal-rights-every-citizen-must-know/"
+],
+"offers":[
   {
    "@type":"Offer",
    "name":"Google Books",
@@ -251,8 +281,13 @@ class="btn">
    "@type":"Offer",
    "name":"Amazon Kindle",
    "url":"https://www.amazon.in/dp/B0GRPRY64C"
+  },
+  {
+   "@type":"Offer",
+   "name":"Paperback - Pothi",
+   "url":"https://store.pothi.com/book/nikhil-chugh-legal-rights-every-citizen-must-know/"
   }
- ]
+]
 }
 </script>
 </section>
