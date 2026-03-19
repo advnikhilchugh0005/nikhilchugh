@@ -89,10 +89,24 @@ color:#1e3a5f;
 font-weight:700;
 }
 @media(max-width:768px){
-.book-details{
-text-align:center;
+
+.book-table{
+flex-direction:column;
+align-items:center;
 }
-} 
+
+.book-col{
+width:100%;
+align-items:center;
+}
+
+.btn{
+width:90%;
+max-width:320px;
+margin:0 auto;
+}
+
+}
 .main-site-btn{
 display:inline-block;
 margin-top:18px;
@@ -129,14 +143,6 @@ display:flex;
 flex-direction:column;
 align-items:center;
 gap:16px;
-min-width:260px;   /* keeps columns balanced */
-}
-
-.book-col{
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:16px;
 width:240px;
 }
 .media-btn{
@@ -157,14 +163,7 @@ color:#d4af37;
 font-weight:700;
 letter-spacing:0.5px;
 }
- @media(max-width:700px){
 
-.book-table{
-flex-direction:column;
-gap:50px;
-}
-
-}
 </style>
 </head>
 
