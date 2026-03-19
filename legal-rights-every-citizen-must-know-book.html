@@ -120,9 +120,9 @@ text-align:center;
 .book-table{
 display:flex;
 justify-content:center;
-gap:100px;     /* bigger gap between Ebook and Paperback */
-flex-wrap:wrap;
-margin-top:50px;
+align-items:flex-start;
+gap:120px;
+margin-top:40px;
 }
 .book-col{
 display:flex;
@@ -132,10 +132,12 @@ gap:16px;
 min-width:260px;   /* keeps columns balanced */
 }
 
-.book-col h3{
-color:#1e3a5f;
-margin-bottom:10px;
-font-size:20px;
+.book-col{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:16px;
+width:240px;
 }
 .media-btn{
 display:block;
