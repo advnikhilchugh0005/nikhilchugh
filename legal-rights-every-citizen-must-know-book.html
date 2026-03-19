@@ -28,22 +28,19 @@ background:#eef5fb;
 margin:0;
 }
 
-.book-links{
-display:flex;
-justify-content:center;
-gap:18px;
-flex-wrap:wrap;
-margin-top:20px;
-}
-
-.btn{
+ .btn{
 background:#d4af37;
 color:#000;
 padding:12px 22px;
 text-decoration:none;
 font-weight:600;
 border-radius:6px;
-display:inline-block;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+width:220px;        /* makes all buttons same width */
+height:42px;        /* same height */
 transition:all 0.3s ease;
 }
 
@@ -120,25 +117,40 @@ color:#1e3a5f;
 font-weight:600;
 text-align:center;
 }
- .book-table{
+.book-table{
 display:flex;
 justify-content:center;
-gap:60px;
+gap:100px;     /* bigger gap between Ebook and Paperback */
 flex-wrap:wrap;
-margin-top:25px;
+margin-top:50px;
 }
-
 .book-col{
 display:flex;
 flex-direction:column;
 align-items:center;
-gap:14px;
+gap:16px;
+min-width:260px;   /* keeps columns balanced */
 }
 
 .book-col h3{
 color:#1e3a5f;
 margin-bottom:10px;
 font-size:20px;
+}
+.media-btn{
+display:block;
+margin:30px auto 0 auto;
+text-align:center;
+width:220px;
+}
+ .media-section{
+text-align:center;
+margin-top:50px;
+}
+ .isbn{
+color:#d4af37;
+font-weight:700;
+letter-spacing:0.5px;
 }
 </style>
 </head>
@@ -155,7 +167,7 @@ Book by <strong>Nikhil Chugh</strong>, Advocate | Supreme Court Bar Association 
 FIR, Bail and Police Procedure Under India’s New Criminal Laws (BNSS 2023)
 </p>
  
-<p><strong>ISBN:</strong> 9789357822091</p>
+<p><strong>ISBN:</strong> <span class="isbn">9789357822091</span></p>
  
 <p>
 By <a href="https://nikhilchugh.in/nikhil-chugh.html" style="color:#d4af37;text-decoration:none;">
@@ -242,16 +254,20 @@ Through simple explanations and practical insights, <strong>Legal Rights Every C
 <p class="paperback-note">
 Paperback copies available via Pothi.com
 </p>
- <h2 style="margin-top:50px;">Media Coverage</h2>
+<div class="media-section">
+
+<h2>Media Coverage</h2>
 
 <p>
 The book <strong>Legal Rights Every Citizen Must Know</strong> has been featured across multiple digital news platforms highlighting the importance of legal awareness among citizens.
 </p>
 
 <a href="https://nikhilchugh.in/press-book-coverage.html"
-class="btn">
+class="btn media-btn">
 View Media Coverage
 </a>
+
+</div>
 </div>
 
 </div>
@@ -327,6 +343,11 @@ View Media Coverage
    "name":"Paperback - Pothi",
    "url":"https://store.pothi.com/book/nikhil-chugh-legal-rights-every-citizen-must-know-0/"
   }
+ {
+ "@type":"Offer",
+ "name":"Goodreads",
+ "url":"https://www.goodreads.com/book/show/249882390-legal-rights-every-citizen-must-know"
+}
 ]
 }
 </script>
