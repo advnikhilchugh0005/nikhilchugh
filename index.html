@@ -805,9 +805,24 @@ opacity: 0.85;
 }   
 #role-text {
   display:inline-block;
-  width:240px;       /* fixed width = premium stability */
-  text-align:left;
+  min-width:170px;
+  text-align:center;   /* FIXED */
   white-space:nowrap;
+  transition:opacity 0.4s ease;
+}
+.hero-title {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.fade-out {
+  opacity:0;
+}
+
+.fade-in {
+  opacity:1;
 }
 
 .cursor {
@@ -974,7 +989,6 @@ opacity: 0.85;
 <a href="nikhil-chugh.html" style="text-decoration:none;color:inherit;">
 Nikhil Chugh – 
 <span id="role-text">Advocate</span>
-<span class="cursor">|</span>
 <noscript>Advocate | Author | Legal Educator</noscript>
 </a>
 </h1>
@@ -1644,16 +1658,19 @@ This website is intended solely for informational purposes and does not constitu
 Disclaimer
 </a>
 </p>
- <p style="margin-top:10px;">
-<a href="featured-in-newspapers.html" style="color:#d4af37;text-decoration:none;">
-Featured in Newspapers
-</a>
-<p style="margin-top:8px;">
-<a href="nikhil-chugh-dc-panipat-coverage.html" style="color:#d4af37;text-decoration:none;">
-DC Panipat Meeting Coverage
-</a>
-</p>
-</p>     
+ <div style="margin-top:10px;">
+  <p>
+    <a href="featured-in-newspapers.html" style="color:#d4af37;text-decoration:none;">
+      Featured in Newspapers
+    </a>
+  </p>
+
+  <p style="margin-top:8px;">
+    <a href="nikhil-chugh-dc-panipat-coverage.html" style="color:#d4af37;text-decoration:none;">
+      DC Panipat Meeting Coverage
+    </a>
+  </p>
+</div>    
 © 2026 <a href="nikhil-chugh.html" style="color:#d4af37;text-decoration:none;">Nikhil Chugh</a> | Advocate | All Rights Reserved
 </footer>
     <!-- BACK TO TOP BUTTON -->
@@ -1860,36 +1877,21 @@ window.onload = function() {
 document.addEventListener("DOMContentLoaded", function () {
 
   const roles = ["Advocate", "Author", "Legal Educator"];
-  let roleIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-
+  let index = 0;
   const el = document.getElementById("role-text");
 
-  function typeEffect() {
-    const current = roles[roleIndex];
+  setInterval(() => {
+    el.classList.add("fade-out");
 
-    if (isDeleting) {
-      el.textContent = current.substring(0, charIndex--);
-    } else {
-      el.textContent = current.substring(0, charIndex++);
-    }
+    setTimeout(() => {
+      index = (index + 1) % roles.length;
+      el.textContent = roles[index];
+      el.classList.remove("fade-out");
+    }, 250);
 
-    let speed = isDeleting ? 50 : 90;
+  }, 2500);
 
-    if (!isDeleting && charIndex === current.length) {
-      speed = 1500; // pause after typing
-      isDeleting = true;
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      roleIndex = (roleIndex + 1) % roles.length;
-      speed = 300;
-    }
-
-    setTimeout(typeEffect, speed);
-  }
-
-  typeEffect();
 });
 </script>
+</body>      
 </html>
