@@ -810,6 +810,16 @@ opacity: 0.85;
   white-space:nowrap;
   transition:opacity 0.4s ease;
 }
+      @media (max-width: 768px) {
+  #role-text {
+    min-width: auto;     /* removes forced gap */
+    text-align: left;    /* prevents awkward spacing */
+  }
+
+  .hero-title {
+    gap: 4px;            /* tighter spacing */
+  }
+}
 .hero-title {
   display:flex;
   justify-content:center;
