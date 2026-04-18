@@ -802,7 +802,24 @@ font-size: 13px;
 color: #cfcfcf;
 margin-top: 8px;
 opacity: 0.85;
-}      
+}   
+#role-text {
+  display:inline-block;
+  min-width:170px; /* prevents layout shift */
+  text-align:left;
+}
+
+.cursor {
+  display:inline-block;
+  margin-left:2px;
+  color:#d4af37;
+  animation:blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity:1; }
+  25%, 75% { opacity:0; }
+}
 </style>
 <script type="application/ld+json">
 {
@@ -954,7 +971,10 @@ opacity: 0.85;
 </div>
 <h1 class="hero-title">
 <a href="nikhil-chugh.html" style="text-decoration:none;color:inherit;">
-Nikhil Chugh – Advocate
+Nikhil Chugh – 
+<span id="role-text">Advocate</span>
+<span class="cursor">|</span>
+<noscript>Advocate | Author | Legal Educator</noscript>
 </a>
 </h1>
 
@@ -1834,5 +1854,41 @@ window.onload = function() {
   }
 };
 </script>
-</body>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const roles = ["Advocate", "Author", "Legal Educator"];
+  let roleIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  const el = document.getElementById("role-text");
+
+  function typeEffect() {
+    const current = roles[roleIndex];
+
+    if (isDeleting) {
+      el.textContent = current.substring(0, charIndex--);
+    } else {
+      el.textContent = current.substring(0, charIndex++);
+    }
+
+    let speed = isDeleting ? 50 : 90;
+
+    if (!isDeleting && charIndex === current.length) {
+      speed = 1500; // pause after typing
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+      speed = 300;
+    }
+
+    setTimeout(typeEffect, speed);
+  }
+
+  typeEffect();
+});
+</script>
 </html>
