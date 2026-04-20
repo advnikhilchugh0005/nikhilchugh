@@ -815,7 +815,9 @@ opacity: 0.85;
     min-width: auto;     /* removes forced gap */
     text-align: left;    /* prevents awkward spacing */
   }
-
+#role-text {
+  transition: opacity 0.3s ease;
+}
   .hero-title {
     gap: 4px;            /* tighter spacing */
   }
@@ -1886,16 +1888,16 @@ window.onload = function() {
 <script>
 window.addEventListener("load", function () {
 
-  if (window.innerWidth < 768) return; // disable on mobile
-
   const roles = ["Advocate", "Author", "Legal Educator"];
   let index = 0;
   const el = document.getElementById("role-text");
 
+  // Slower on mobile, faster on desktop
+  const intervalTime = window.innerWidth < 768 ? 6000 : 4000;
+
   setInterval(() => {
-    index = (index + 1) % roles.length;
-    el.textContent = roles[index];
-  }, 4000);
+    el.textContent = roles[++index % roles.length];
+  }, intervalTime);
 
 });
 </script>
