@@ -5,7 +5,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'">
-<link rel="internal" href="featured-in-newspapers.html">
 <noscript>
 <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -1729,14 +1728,6 @@ function closeMenu() {
 }
 </script>
   <script>
-window.onscroll = function() {
-    var button = document.querySelector(".back-to-top");
-    if (document.documentElement.scrollTop > 300) {
-        button.style.display = "block";
-    } else {
-        button.style.display = "none";
-    }
-};
 
 document.querySelector(".back-to-top").addEventListener("click", function(e) {
     e.preventDefault();
@@ -1778,19 +1769,6 @@ const startCounting = () => {
   });
 };
 
-let counted = false;
-
-window.addEventListener("scroll", function() {
- const section = document.querySelector(".insta-stats");
-if (!section) return;
-  const sectionPosition = section.getBoundingClientRect().top;
-  const screenPosition = window.innerHeight;
-
-  if (sectionPosition < screenPosition && !counted) {
-    startCounting();
-    counted = true;
-  }
-});
 </script>
     <script>
 let index = 0;
@@ -1899,6 +1877,35 @@ window.addEventListener("load", function () {
   }, intervalTime);
 
 });
+let ticking = false;
+let counted = false;
+
+window.addEventListener("scroll", function () {
+  if (!ticking) {
+    window.requestAnimationFrame(function () {
+
+      const button = document.querySelector(".back-to-top");
+      if (document.documentElement.scrollTop > 300) {
+        button.style.display = "block";
+      } else {
+        button.style.display = "none";
+      }
+
+      const section = document.querySelector(".insta-stats");
+      if (section && !counted) {
+        const sectionPosition = section.getBoundingClientRect().top;
+        if (sectionPosition < window.innerHeight) {
+          startCounting();
+          counted = true;
+        }
+      }
+
+      ticking = false;
+    });
+
+    ticking = true;
+  }
+}, { passive: true });
 </script>
 </body>      
 </html>
