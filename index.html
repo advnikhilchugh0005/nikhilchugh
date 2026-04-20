@@ -1885,18 +1885,17 @@ window.onload = function() {
 </script>
 
 <script>
-<script>
 window.addEventListener("load", function () {
 
   const roles = ["Advocate", "Author", "Legal Educator"];
   let index = 0;
   const el = document.getElementById("role-text");
 
-  // Slower on mobile, faster on desktop
   const intervalTime = window.innerWidth < 768 ? 6000 : 4000;
 
   setInterval(() => {
-    el.textContent = roles[++index % roles.length];
+    index = (index + 1) % roles.length;
+    el.textContent = roles[index];
   }, intervalTime);
 
 });
