@@ -846,6 +846,12 @@ opacity: 0.85;
   0%, 50%, 100% { opacity:1; }
   25%, 75% { opacity:0; }
 }
+ @media (max-width:768px){
+  .testimonial-slider,
+  .counter {
+    display:none;
+  }
+}     
 </style>
 <script type="application/ld+json">
 {
@@ -1884,7 +1890,7 @@ window.onload = function() {
 </script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
 
   const roles = ["Advocate", "Author", "Legal Educator"];
   let index = 0;
