@@ -21,11 +21,17 @@ body{
 }
 
 .journey-hero{
-    display:flex;
-    gap:40px;
+
+    display:grid;
+
+    grid-template-columns:250px 1fr 250px;
+
     align-items:center;
+
+    gap:40px;
+
     margin-bottom:60px;
-    flex-wrap:wrap;
+
 }
 
 .journey-image img{
@@ -34,14 +40,16 @@ body{
     border-radius:20px;
     box-shadow:0 15px 40px rgba(0,0,0,.12);
 }
-
 .journey-content{
-    flex:1;
-}
 
+    text-align:center;
+
+}
 .journey-content h1{
-    font-size:48px;
-    margin-bottom:20px;
+    font-size:72px;
+    line-height:1.1;
+    margin-bottom:25px;
+    font-weight:800;
 }
 
 .journey-content blockquote{
@@ -134,8 +142,8 @@ max-width:220px;
 }
 
 .journey-photo img{
-width:220px;
-height:220px;
+width:250px;
+height:250px;
 object-fit:cover;
 border-radius:20px;
 box-shadow:0 15px 40px rgba(0,0,0,.12);
@@ -174,7 +182,6 @@ transform:rotate(90deg);
 <body>
 <section class="journey-section">
 <div class="journey-hero">
-<div class="journey-images">
 
     <div class="journey-photo">
         <img src="Neet-Nikhil-Chugh.webp" alt="NEET Student Nikhil Chugh">
@@ -182,7 +189,22 @@ transform:rotate(90deg);
         <p>My journey began in the world of medical sciences.</p>
     </div>
 
-    <div class="journey-arrow">➜</div>
+    <div class="journey-content">
+        <h1>From NEET Qualifier to Advocate: Why I Chose Justice Over Medicine</h1>
+
+        <blockquote>
+            “A doctor heals individuals, but the law can transform society.
+            That belief changed my life.”
+        </blockquote>
+
+        <p>
+            My name is <strong>Nikhil Chugh</strong>, an Advocate, Author,
+            Legal Educator, and Ph.D. Scholar from Panipat, Haryana.
+            My journey from medical science to law has been driven by a
+            simple mission—making justice and legal awareness accessible
+            to every citizen.
+        </p>
+    </div>
 
     <div class="journey-photo">
         <img src="Advocate-Author-Nikhil-Chugh.webp" alt="Advocate Author Nikhil Chugh">
@@ -192,25 +214,6 @@ transform:rotate(90deg);
 
 </div>
 
-<div class="journey-content">
-
-    <h1>From NEET Qualifier to Advocate: Why I Chose Justice Over Medicine</h1>
-
-    <blockquote>
-        “A doctor heals individuals, but the law can transform society.
-        That belief changed my life.”
-    </blockquote>
-
-    <p>
-        My name is <strong>Nikhil Chugh</strong>, an Advocate, Author,
-        Legal Educator, and Ph.D. Scholar from Panipat, Haryana.
-        My journey from medical science to law has been driven by a
-        simple mission—making justice and legal awareness accessible
-        to every citizen.
-    </p>
-
-</div>
-</div>
 <div class="journey-container">
 
 
@@ -271,7 +274,6 @@ transform:rotate(90deg);
 
     <div class="journey-card">
         <h2>📚 Why Legal Awareness Became My Mission</h2>
-my-journey.html
         <p>
             During my interactions with citizens, I realized that many
             people are unaware of their most basic legal rights.
